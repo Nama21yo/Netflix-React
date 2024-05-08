@@ -1,0 +1,66 @@
+/* Outer container for the header */
+.header_outer_container {
+  position: sticky;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(20, 20, 20);
+  height: 10vh;
+  color: white;
+  transition: all 0.5s;
+  transition-timing-function: ease-in;
+  z-index: 1;
+}
+
+/* Class for a black background on the header */
+.nav_black {
+  background-color: rgb(20, 20, 20);
+}
+
+/* Container for the header content */
+.header_container {
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Left side of the header */
+.header_left ul,
+.header_right ul {
+  width: 140%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+  cursor: pointer;
+}
+
+/* Right side of the header */
+.header_right ul {
+  gap: 0.5rem;
+}
+
+@media (max-width: 768px) {
+  .header_left ul li:nth-child(2),
+  .header_left ul li:nth-child(3),
+  .header_left ul li:nth-child(4),
+  .header_left ul li:nth-child(5),
+  .header_left ul li:nth-child(6),
+  .header_left ul li:nth-child(7),
+  .header_left ul li:nth-child(8) {
+    display: none; /* Hide these elements on smaller screens */
+  }
+
+  .header_right ul li:nth-child(2),
+  .header_right ul li:nth-child(3),
+  .header_right ul li:nth-child(4),
+  .header_right ul li:nth-child(5) {
+    display: none; /* Hide these elements on smaller screens */
+  }
+
+  .header_right ul li:nth-child(1) {
+    margin-right: 10px; /* Add margin to the first item on smaller screens */
+  }
+}

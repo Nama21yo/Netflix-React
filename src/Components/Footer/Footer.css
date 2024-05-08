@@ -1,0 +1,88 @@
+/* Outer container for the footer */
+.footer_outer_container {
+  background-color: #111; /* Background color of the footer */
+  color: grey; /* Text color */
+  display: flex; /* Use flexbox for layout */
+  justify-content: center; /* Center content horizontally */
+}
+
+/* Inner container for the footer */
+.footer_inner_container {
+  width: 60%; /* Width of the inner container */
+}
+
+/* Icons container */
+.footer_icons {
+  width: 12%; /* Width of the icons container */
+  display: flex; /* Use flexbox for layout */
+  justify-content: space-between; /* Space evenly between icons */
+  margin-left: 10px; /* Left margin for spacing */
+  color: #fff; /* Icon color */
+}
+
+/* Data container */
+.footer_data {
+  display: flex; /* Use flexbox for layout */
+  justify-content: space-between; /* Space evenly between data */
+}
+
+/* Unordered list */
+.footer_data ul {
+  list-style: none; /* Remove default list style */
+  display: flex; /* Use flexbox for layout */
+  flex-direction: column; /* Arrange items vertically */
+  justify-content: space-around; /* Space evenly between items */
+  height: 12vh; /* Height of the list */
+}
+
+/* List items */
+.footer_data ul li {
+  cursor: pointer; /* Change cursor to pointer on hover */
+}
+
+/* Service code container */
+.service_code {
+  display: flex; /* Use flexbox for layout */
+  align-items: center; /* Center items vertically */
+  justify-content: center; /* Center items horizontally */
+  border: #fff 1px solid; /* Border style */
+  width: 15%; /* Width of the service code container */
+  margin: 10px 0; /* Margin around the container */
+  cursor: pointer; /* Change cursor to pointer on hover */
+}
+
+/* Hover effect for service code */
+.service_code:hover {
+  color: #fff; /* Change text color on hover */
+}
+
+/* Copywrite text */
+.copy-write {
+  font-size: 12px; /* Font size of the copywrite text */
+  margin-bottom: 10px; /* Bottom margin for spacing */
+}
+@media (max-width: 768px) {
+  .footer_inner_container {
+    flex-direction: column; /* Change to a column layout for smaller screens */
+    align-items: center; /* Center items horizontally */
+  }
+
+  .footer_icons {
+    margin-bottom: 20px; /* Add bottom margin to the social media icons */
+  }
+
+  .footer_data {
+    display: flex; /* Use flexbox for layout */
+    flex-wrap: wrap; /* Allow items to wrap to the next line */
+    justify-content: center; /* Center items horizontally */
+  }
+
+  .footer_data div {
+    flex: 1 1 50%; /* Equal width for columns, 2 columns per row */
+    margin-bottom: 20px; /* Add bottom margin to each column */
+  }
+
+  .service_code {
+    margin-bottom: 20px; /* Add bottom margin to the service code container */
+  }
+}

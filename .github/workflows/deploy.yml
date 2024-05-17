@@ -35,9 +35,13 @@ jobs:
     name: Deploy
     needs: build
     runs-on: ubuntu-latest
+    env:
+      VITE_REACT_APP_API_KEY: "0b91e0ec88a83357d43b8469bcdd6da8"
     if: github.ref == 'refs/heads/main'
 
     steps:
+      - name: Display custom environment variables
+        run: echo "The VITE_REACT_APP_API_KEY is ${{env.VITE_REACT_APP_API_KEY}}"
       - name: Download artifact
         uses: actions/download-artifact@v2
         with:
